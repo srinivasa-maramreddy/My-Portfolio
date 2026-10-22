@@ -190,9 +190,9 @@ img { display: block; max-width: 100%; }
 .contact-email { display: inline-flex; align-items: center; gap: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(130,244,203,.4); color: var(--accent); font-size: clamp(15px, 2vw, 20px); font-weight: 600; letter-spacing: -.03em; }
 .contact-email span { font-size: 15px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.contact-links a { display: inline-flex; align-items: center; gap: 14px; padding: 12px 15px; border: 1px solid rgba(243,239,230,.2); border-radius: 5px 12px 12px 12px; color: #f9f2e8; background: rgba(255,255,255,.045); font-family: var(--mono); font-size: 11px; font-weight: 600; transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease; }
-.contact-links a span { margin: 0; color: var(--accent); font-size: 14px; }
-.contact-links a:hover { transform: translateY(-2px); border-color: rgba(238,136,105,.65); color: #fff; background: rgba(200,77,50,.14); }
+.contact-links a { display: inline-flex; align-items: center; gap: 14px; padding: 13px 17px; border: 1px solid rgba(238,136,105,.48); border-radius: 6px 13px 13px 13px; color: #fff8f0; background: rgba(200,77,50,.14); font-family: var(--sans); font-size: 12px; font-weight: 700; transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease; }
+.contact-links a span { margin: 0; color: #ee8869; font-size: 14px; }
+.contact-links a:hover { transform: translateY(-2px); border-color: #ee8869; color: #fff; background: rgba(200,77,50,.28); }
 .contact-links a:hover span { color: #fff; }
 .site-footer { background: #070b12; }
 .footer-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--dim); font-family: var(--mono); font-size: 9px; }
