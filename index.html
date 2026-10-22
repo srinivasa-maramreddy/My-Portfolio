@@ -1,298 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Srinivas Maram | Backend Developer</title>
-    <link rel="stylesheet" href="style.css?v=about-spacing-2" />
-    <link rel="stylesheet" href="mediaqueires.css?v=about-spacing-2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d16" />
+    <meta name="description" content="Srinivas Maram — Backend Developer at TCS, working in Banking and Financial Services. Java, Spring Boot, microservices, and backend engineering." />
+    <title>Srinivas Maram — Backend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css?v=2026-modern" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Srinivas  Maram</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#Skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#home" aria-label="Srinivas Maram, home">
+          <span class="brand-mark">SM</span>
+          <span class="brand-copy">Srinivas Maram<span>Backend Developer</span></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </nav>
+        <a class="nav-contact" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span>
+        </button>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Srinivas  Maram</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#Skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="assests/profile-pic.jpeg"alt="Srinivas  Maram profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Srinivas  Maram</h1>
-        <p class="section__text__p2">Backend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('https://drive.google.com/file/d/16Cu6JLMCFwfZznq9SnwFXOuz7i5zfPke/view?usp=sharing', '_blank')"
-          >
-            Download Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='https://www.linkedin.com/in/srinivas-maram-2484a726a/./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assests/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/srinivas-maram-2484a726a/'"
-          />
-          <img
-            src="./assests/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/srinivasmaram8/Srinivas'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <!-- <img
-            src="C:\Users\91720\Downloads\assests\about-pic.jpeg"
-            alt="Profile picture"
-            class="about-pic"
-          /> -->
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assests/experience.png"
-                alt="Skills icon"
-                class="icon"
-              />
-              <h3>Skills</h3>
-              <p>Backend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assests/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech. Bachelor of Computer Science</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assests/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>TCS<br />Backend Developer<br />Banking &amp; Financial Services<br />May 2025–Present</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assests/education.png"
-                alt="Certification icon"
-                class="icon"
-              />
-              <h3>Certification</h3>
-              <p>Advanced Java<br />iHub Academy</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p style="color: rgb(12, 214, 106);">
-                I’m a Backend Developer at TCS in the Banking and Financial Services domain, where I’ve been working since May 2025. I previously completed an internship as a Junior Software Engineer and earned an Advanced Java certification from iHub Academy. My skills include Java, Spring Boot, microservices, JPA, Hibernate, Kafka, and MySQL, plus a foundation in JavaScript and React. I enjoy solving software problems and collaborating on reliable backend systems.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assests/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-       
-      />
-    </section>
-    <section id="Skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="Skills-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="Skills-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>Spring Boot</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>Microservices</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>JPA</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>Hibernate</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="Skills-sub-title">Backend &amp; Supporting Technologies</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>Kafka</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assests/checkmark.png" alt="Skills icon" class="icon" />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assests/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="Skills-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assests/online-book-store.png"
-                alt="Online Book Store project preview"
-                class="project-img"
-              />
-            </div>
-            <h2 class="Skills-sub-title project-title">Online Book Store</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assests/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assests/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:srinivasa.1743000@gmail.com">srinivasa.1743000@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assests/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/srinivas-maram-2484a726a/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#about">About <span>01</span></a>
+        <a href="#experience">Experience <span>02</span></a>
+        <a href="#skills">Skills <span>03</span></a>
+        <a href="#projects">Projects <span>04</span></a>
+        <a href="#contact">Contact <span>05</span></a>
       </nav>
-      <p>Copyright &#169; 2024 Srinivas  Maram. All Rights Reserved.</p>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-rule"></span>Backend Developer <span class="eyebrow-slash">/</span> TCS</p>
+          <h1 id="hero-title">Thoughtful<br />backends.<br /><span>Reliable by design.</span></h1>
+          <p class="hero-intro">I’m Srinivas Maram, a backend developer at TCS working in Banking &amp; Financial Services. I work with Java, Spring Boot, and microservices, with a focus on dependable, maintainable software.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="https://drive.google.com/file/d/16Cu6JLMCFwfZznq9SnwFXOuz7i5zfPke/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download resume <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-status"><span class="status-dot"></span><span>At TCS since May 2025</span><span class="status-divider">·</span><span>Banking &amp; Financial Services</span></div>
+          <div class="hero-stack">
+            <span class="stack-label">CORE TOOLKIT</span>
+            <div class="stack-list"><span>Java</span><span>Spring Boot</span><span>Microservices</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Srinivas Maram portrait">
+          <div class="visual-glow"></div>
+          <div class="visual-grid-mark" aria-hidden="true"></div>
+          <figure class="portrait-card">
+            <img src="./assests/profile-pic.jpeg" alt="Srinivas Maram" fetchpriority="high" />
+            <figcaption class="portrait-caption">
+              <span class="caption-overline">SRINIVAS MARAM <i>—</i> BACKEND DEVELOPER</span>
+              <span class="caption-main">Building for what matters.</span>
+            </figcaption>
+          </figure>
+          <div class="focus-card">
+            <span class="focus-icon" aria-hidden="true">⌘</span>
+            <div><span class="micro-label">ENGINEERING FOCUS</span><strong>Financial services</strong></div>
+            <span class="focus-arrow" aria-hidden="true">↗</span>
+          </div>
+          <span class="visual-index">01 <i>/</i> 05</span>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Areas of focus">
+        <div class="ticker-track"><span>BACKEND ENGINEERING</span><i>✳</i><span>BANKING &amp; FINANCIAL SERVICES</span><i>✳</i><span>JAVA &amp; SPRING BOOT</span><i>✳</i><span>MICROSERVICES</span><i>✳</i><span>BACKEND ENGINEERING</span><i>✳</i><span>BANKING &amp; FINANCIAL SERVICES</span><i>✳</i><span>JAVA &amp; SPRING BOOT</span><i>✳</i><span>MICROSERVICES</span><i>✳</i></div>
+      </div>
+
+      <section class="section wrap about-section" id="about" aria-labelledby="about-title">
+        <div class="section-kicker"><span>01</span><span>ABOUT</span></div>
+        <div class="about-layout">
+          <h2 class="section-title" id="about-title">Good software is<br /><span>built with care.</span></h2>
+          <div class="about-copy">
+            <p class="body-large">I’m a backend developer at TCS, working in the Banking and Financial Services domain since May 2025.</p>
+            <p>I previously completed an internship as a Junior Software Engineer and earned an Advanced Java certification from iHub Academy. My work is grounded in Java, Spring Boot, microservices, and the supporting tools I use to build and maintain backend applications.</p>
+            <a class="text-link" href="#experience">More about my background <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <div class="about-facts">
+          <div class="fact"><span class="micro-label">CURRENT ROLE</span><strong>Backend Developer</strong><span>TCS · Since May 2025</span></div>
+          <div class="fact"><span class="micro-label">DOMAIN</span><strong>Banking &amp; Financial Services</strong><span>Enterprise technology</span></div>
+          <div class="fact"><span class="micro-label">FOCUS</span><strong>Java · Spring Boot</strong><span>Microservices &amp; persistence</span></div>
+        </div>
+      </section>
+
+      <section class="section wrap experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div class="section-kicker"><span>02</span><span>CAREER</span></div>
+          <div class="section-heading-row"><h2 class="section-title" id="experience-title">Experience &amp;<br /><span>foundations.</span></h2><p class="section-note">A growing foundation in software engineering and backend development.</p></div>
+        </div>
+        <div class="experience-layout">
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-date">May 2025 — Present</div>
+              <span class="timeline-marker" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <div class="timeline-top"><span class="micro-label">CURRENT ROLE</span><span class="timeline-live"><i></i> NOW</span></div>
+                <h3>Backend Developer</h3>
+                <p class="timeline-company">TCS <span>·</span> Banking &amp; Financial Services</p>
+                <p class="timeline-description">Working in backend development for the banking and financial services domain.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">Earlier experience</div>
+              <span class="timeline-marker muted-marker" aria-hidden="true"></span>
+              <div class="timeline-card">
+                <div class="timeline-top"><span class="micro-label">INTERNSHIP</span></div>
+                <h3>Junior Software Engineer</h3>
+                <p class="timeline-company">Software engineering internship</p>
+              </div>
+            </article>
+          </div>
+          <aside class="credentials" aria-label="Education and certification">
+            <div class="credential-card">
+              <span class="credential-symbol" aria-hidden="true">A1</span>
+              <div><span class="micro-label">EDUCATION</span><h3>B.Tech.</h3><p>Bachelor of Computer Science</p></div>
+              <span class="credential-corner" aria-hidden="true">↗</span>
+            </div>
+            <div class="credential-card">
+              <span class="credential-symbol" aria-hidden="true">01</span>
+              <div><span class="micro-label">CERTIFICATION</span><h3>Advanced Java</h3><p>iHub Academy</p></div>
+              <span class="credential-corner" aria-hidden="true">↗</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section wrap skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <div class="section-kicker"><span>03</span><span>TOOLKIT</span></div>
+          <div class="section-heading-row"><h2 class="section-title" id="skills-title">Tools for building<br /><span>reliable software.</span></h2><p class="section-note">Core backend technologies, with supporting tools I continue to develop.</p></div>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-panel skill-panel-featured">
+            <div class="skill-panel-head"><div><span class="micro-label">01 / PRIMARY</span><h3>Backend development</h3></div><span class="panel-mark" aria-hidden="true">↗</span></div>
+            <ul class="skill-list">
+              <li><span>Java</span><span class="skill-level">Intermediate</span></li>
+              <li><span>Spring Boot</span><span class="skill-level">Intermediate</span></li>
+              <li><span>Microservices</span><span class="skill-level">Intermediate</span></li>
+              <li><span>JPA</span><span class="skill-level">Intermediate</span></li>
+              <li><span>Hibernate</span><span class="skill-level">Intermediate</span></li>
+            </ul>
+          </article>
+          <article class="skill-panel">
+            <div class="skill-panel-head"><div><span class="micro-label">02 / SUPPORTING</span><h3>Data &amp; web technologies</h3></div><span class="panel-mark" aria-hidden="true">↗</span></div>
+            <ul class="skill-list">
+              <li><span>MySQL</span><span class="skill-level">Intermediate</span></li>
+              <li><span>JavaScript</span><span class="skill-level">Intermediate</span></li>
+              <li><span>Kafka</span><span class="skill-level skill-level-basic">Basic</span></li>
+              <li><span>React</span><span class="skill-level skill-level-basic">Basic</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div class="section-kicker"><span>04</span><span>SELECTED WORK</span></div>
+          <div class="section-heading-row"><h2 class="section-title" id="projects-title">A project I’m<br /><span>proud to share.</span></h2><p class="section-note">A closer look at the Online Book Store project.</p></div>
+        </div>
+        <article class="project-card">
+          <div class="project-image-wrap"><img src="./assests/online-book-store.png" alt="Online Book Store storefront project preview" loading="lazy" /><span class="project-image-label">FEATURED PROJECT <i>—</i> 01</span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-dot"></span> SELECTED PROJECT</div>
+            <h3>Online<br />Book Store</h3>
+            <p>An online bookstore experience, presented through a clean storefront and book catalog.</p>
+            <a class="button button-project" href="https://github.com/srinivasmaram8" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span></a>
+            <span class="project-index">01 <i>/</i> 01</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner wrap">
+          <div class="section-kicker"><span>05</span><span>CONTACT</span></div>
+          <div class="contact-layout">
+            <div><p class="eyebrow">LET’S START A CONVERSATION</p><h2 class="section-title" id="contact-title">Let’s build<br /><span>what’s next.</span></h2></div>
+            <div class="contact-copy"><p>I’m always glad to connect with people working on thoughtful software and backend engineering.</p><a class="contact-email" href="mailto:srinivasa.1743000@gmail.com">srinivasa.1743000@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://www.linkedin.com/in/srinivas-maram-2484a726a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/srinivasmaram8" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner wrap"><a class="footer-brand" href="#home">SM<span> / Srinivas Maram</span></a><span>Backend Developer · Java · Spring Boot</span><span>© <span id="year">2026</span> Srinivas Maram</span></div>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js?v=2026-modern" defer></script>
   </body>
 </html>
