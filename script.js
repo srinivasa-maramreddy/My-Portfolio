@@ -12,37 +12,27 @@ if (portfolioIntro) {
   ].filter(Boolean);
   let isEntering = false;
 
-  if (document.documentElement.classList.contains("portfolio-intro-pending")) {
-    document.body.classList.add("portfolio-intro-open");
-    backgroundContent.forEach((element) => element.setAttribute("inert", ""));
+  document.body.classList.add("portfolio-intro-open");
+  backgroundContent.forEach((element) => element.setAttribute("inert", ""));
 
-    const enterPortfolio = () => {
-      if (isEntering) return;
-      isEntering = true;
+  const enterPortfolio = () => {
+    if (isEntering) return;
+    isEntering = true;
 
-      try {
-        sessionStorage.setItem("portfolioIntroSeen", "1");
-      } catch {
-        // The portfolio still opens when session storage is unavailable.
-      }
+    portfolioIntro.classList.add("is-leaving");
+    document.documentElement.classList.remove("portfolio-intro-pending");
+    document.body.classList.remove("portfolio-intro-open");
+    backgroundContent.forEach((element) => element.removeAttribute("inert"));
+    document.querySelector("#hero-title")?.focus({ preventScroll: true });
 
-      portfolioIntro.classList.add("is-leaving");
-      document.documentElement.classList.remove("portfolio-intro-pending");
-      document.body.classList.remove("portfolio-intro-open");
-      backgroundContent.forEach((element) => element.removeAttribute("inert"));
-      document.querySelector("#hero-title")?.focus({ preventScroll: true });
+    window.setTimeout(() => portfolioIntro.remove(), 700);
+  };
 
-      window.setTimeout(() => portfolioIntro.remove(), 700);
-    };
-
-    enterButton?.addEventListener("click", enterPortfolio);
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !isEntering) enterPortfolio();
-    });
-    window.requestAnimationFrame(() => enterButton?.focus({ preventScroll: true }));
-  } else {
-    portfolioIntro.remove();
-  }
+  enterButton?.addEventListener("click", enterPortfolio);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !isEntering) enterPortfolio();
+  });
+  window.requestAnimationFrame(() => enterButton?.focus({ preventScroll: true }));
 }
 
 const heroSection = document.querySelector(".hero");

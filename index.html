@@ -6,19 +6,11 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Srinivasa Maramreddy — Backend Developer at TCS, working in Banking and Financial Services. Java, Spring Boot, microservices, and backend engineering." />
     <title>Srinivasa Maramreddy — Backend Developer</title>
-    <script>
-      try {
-        if (sessionStorage.getItem("portfolioIntroSeen") !== "1") {
-          document.documentElement.classList.add("portfolio-intro-pending");
-        }
-      } catch {
-        document.documentElement.classList.add("portfolio-intro-pending");
-      }
-    </script>
+    <script>document.documentElement.classList.add("portfolio-intro-pending");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css?v=2026-profile-intro" />
+    <link rel="stylesheet" href="./style.css?v=2026-profile-intro-2" />
   </head>
   <body>
     <div class="portfolio-intro" id="portfolio-intro" role="dialog" aria-modal="true" aria-label="Portfolio introduction" aria-describedby="intro-hint">
@@ -215,6 +207,7 @@
     <footer class="site-footer">
       <div class="footer-inner wrap"><a class="footer-brand" href="#home">SM<span> / Srinivasa Maramreddy</span></a><span>Backend Developer · Java · Spring Boot</span><span>© <span id="year">2026</span> Srinivasa Maramreddy</span></div>
     </footer>
-    <script src="./script.js?v=2026-profile-intro" defer></script>
+    <noscript><style>.portfolio-intro { display: none !important; }</style></noscript>
+    <script src="./script.js?v=2026-profile-intro-2" defer></script>
   </body>
 </html>
