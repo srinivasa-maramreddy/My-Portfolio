@@ -179,6 +179,8 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 
 .skills-section { border-bottom: 1px solid var(--line); }
 .skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.skill-panel-tools { grid-column: 1 / -1; }
+.skill-panel-tools .skill-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 22px; }
 .skill-panel { min-width: 0; padding: 27px 30px 22px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(155deg, rgba(21,32,50,.94), rgba(13,20,32,.9)); }
 .skill-panel-featured { border-color: rgba(130,244,203,.23); background: radial-gradient(circle at 100% 0%, rgba(130,244,203,.09), transparent 38%), linear-gradient(155deg, rgba(21,32,50,.96), rgba(13,20,32,.9)); }
 .skill-panel-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding-bottom: 21px; border-bottom: 1px solid var(--line); }
@@ -288,6 +290,7 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
   .credential-card p { font-size: 10px; }
   .credential-symbol { width: 33px; height: 33px; flex-basis: 33px; }
   .skill-grid { grid-template-columns: 1fr; gap: 12px; }
+  .skill-panel-tools .skill-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
   .skill-panel { padding: 22px 20px 16px; }
   .skill-panel-head h3 { font-size: 17px; }
   .project-card { grid-template-columns: 1fr; }
