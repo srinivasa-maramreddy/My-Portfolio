@@ -642,3 +642,77 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; filter: blur(5px); tran
   }
   .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual { opacity: 1 !important; filter: none !important; }
 }
+
+/* Carry the opening navy, blue, and emerald theme through pages 2–4.
+   The projects and contact sections retain their existing palettes. */
+.ticker {
+  border-color: rgba(105,184,255,.2);
+  background: #0a1725;
+}
+.ticker-track { color: #b7d0e1; }
+.ticker-track i { color: #52dba9; }
+.about-section, .experience-section, .skills-section {
+  --bg: #0b1725;
+  --panel: #102135;
+  --panel-light: #14283b;
+  --text: #edf6ff;
+  --muted: #b4c7d6;
+  --dim: #8ea9bd;
+  --accent: #52dba9;
+  --blue: #74bdff;
+  --line: rgba(111,180,230,.18);
+  --line-strong: rgba(111,180,230,.34);
+  color: var(--text);
+  border-color: var(--line);
+  background: #0b1725;
+}
+.about-section .section-kicker,
+.experience-section .section-kicker,
+.skills-section .section-kicker { color: #a7bfd0; }
+.about-section .about-copy .body-large { color: #d8eaf6; }
+.about-section .text-link { border-bottom-color: rgba(82,219,169,.54); }
+.about-section .fact {
+  border-color: rgba(105,184,255,.2);
+  border-radius: 9px 16px 16px 16px;
+  background: linear-gradient(145deg, rgba(116,189,255,.08), rgba(13,26,41,.96));
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+.about-section .fact:hover {
+  border-color: rgba(82,219,169,.48);
+  box-shadow: 0 15px 32px rgba(0,0,0,.2), 0 0 24px rgba(82,219,169,.06);
+}
+.experience-section .timeline-date { color: #a8bdcd; }
+.experience-section .timeline-card {
+  border-color: rgba(105,184,255,.2);
+  border-radius: 9px 16px 16px 16px;
+  background: linear-gradient(140deg, rgba(18,37,56,.92), rgba(12,27,42,.94));
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+}
+.experience-section .timeline-card:hover {
+  border-color: rgba(82,219,169,.44);
+  box-shadow: 0 18px 34px rgba(0,0,0,.22), 0 0 24px rgba(82,219,169,.05);
+}
+.experience-section .timeline-company { color: #d2e4ef; }
+.experience-section .credential-card {
+  border-color: rgba(105,184,255,.2);
+  border-radius: 9px 16px 16px 16px;
+  background: radial-gradient(circle at 100% 0%, rgba(82,219,169,.1), transparent 42%), #102135;
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+}
+.experience-section .credential-card:hover { box-shadow: 0 18px 34px rgba(0,0,0,.22); }
+.experience-section .credential-symbol { border-color: rgba(82,219,169,.32); }
+.skills-section .skill-panel {
+  border-color: rgba(105,184,255,.22);
+  border-radius: 9px 18px 18px 18px;
+  background: linear-gradient(155deg, rgba(18,37,56,.96), rgba(12,27,42,.96));
+  box-shadow: 0 15px 36px rgba(0,0,0,.16);
+}
+.skills-section .skill-panel-featured {
+  border-color: rgba(82,219,169,.34);
+  background: radial-gradient(circle at 100% 0%, rgba(82,219,169,.12), transparent 40%), linear-gradient(155deg, rgba(18,42,57,.98), rgba(12,27,42,.96));
+}
+.skills-section .skill-panel:hover { box-shadow: 0 20px 42px rgba(0,0,0,.26), 0 0 26px rgba(105,184,255,.06); }
+.skills-section .skill-list li { border-bottom-color: rgba(159,199,224,.12); }
+.skills-section .skill-list li > span:first-child { color: #e2eef6; }
+.skills-section .skill-level { color: #a9c0d0; }
+.skills-section .skill-level-basic::before { background: #74bdff; }
