@@ -169,7 +169,8 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 .timeline-card h3 { margin: 14px 0 2px; color: var(--text); font-size: 18px; letter-spacing: -.04em; }
 .timeline-company { margin: 0; color: #d1dbe6; font-size: 11px; }
 .timeline-company span { color: var(--accent); padding-inline: 4px; }
-.timeline-description { margin: 13px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.timeline-highlights { display: grid; gap: 8px; margin: 13px 0 0; padding-left: 15px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.timeline-highlights li::marker { color: var(--accent); }
 .timeline-tech { margin-top: 13px; }
 .timeline-tech .stack-label { margin-bottom: 7px; }
 .timeline-tech .stack-list { gap: 6px; }
