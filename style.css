@@ -401,18 +401,19 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   width: clamp(360px, 47vw, 660px);
   aspect-ratio: 1;
   border-radius: 50%;
-  opacity: .9;
+  opacity: .76;
+  filter: blur(28px);
 }
 .hero-glow-blue {
   top: -38%;
   left: -10%;
-  background: radial-gradient(circle, rgba(62, 127, 255, .28) 0%, rgba(62, 127, 255, .1) 42%, transparent 72%);
+  background: radial-gradient(circle, rgba(62, 127, 255, .24) 0%, rgba(62, 127, 255, .08) 42%, transparent 72%);
   animation: hero-blue-drift 24s ease-in-out infinite alternate;
 }
 .hero-glow-green {
   right: -12%;
   bottom: -48%;
-  background: radial-gradient(circle, rgba(20, 190, 128, .23) 0%, rgba(20, 190, 128, .08) 43%, transparent 72%);
+  background: radial-gradient(circle, rgba(20, 190, 128, .2) 0%, rgba(20, 190, 128, .07) 43%, transparent 72%);
   animation: hero-green-drift 28s ease-in-out infinite alternate;
 }
 .hero-name {
@@ -529,7 +530,8 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-atmosphere::before, .hero-glow, .hero .status-dot,
-  .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual {
+  .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual,
+  .hero .hero-actions .button {
     animation: none !important;
     transition: none !important;
     transform: none !important;
