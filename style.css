@@ -425,7 +425,15 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
 }
 .hero .eyebrow { color: #b8c7d8; }
 .hero .eyebrow-rule { background: var(--accent); }
-.hero h1 { color: var(--text); }
+.hero h1 {
+  max-width: 760px;
+  color: var(--text);
+  font-family: "Iowan Old Style", Baskerville, "Palatino Linotype", Georgia, serif;
+  font-size: clamp(48px, 6.3vw, 84px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
 .hero h1 span { color: var(--accent); }
 .hero .hero-intro { color: #bdcad9; }
 .hero .hero-status {
@@ -452,7 +460,25 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   box-shadow: 0 0 0 7px #081525, 0 0 0 8px rgba(130, 173, 255, .2), 0 32px 74px rgba(0, 0, 0, .34);
 }
 .hero .visual-index { color: #a9b8ca; }
-.hero .hero-actions .button { transition: transform .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease, box-shadow .22s ease; }
+.hero .hero-actions .button {
+  min-height: 54px;
+  gap: 24px;
+  padding-inline: 21px 14px;
+  border-radius: 999px;
+  transition: transform .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease, box-shadow .22s ease;
+}
+.hero .hero-actions .button > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: transform .22s ease;
+}
+.hero .hero-actions .button:hover > span { transform: translate(2px, -1px); }
 .hero .hero-actions .button-primary {
   border-color: rgba(112, 226, 182, .72);
   color: #082018;
@@ -487,7 +513,7 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   animation-delay: 240ms;
 }
 .hero-motion-ready .hero-copy > h1 > span {
-  display: inline-block;
+  display: block;
   animation: hero-title-accent-reveal .78s cubic-bezier(.2, .7, .2, 1) 360ms both;
 }
 .hero-motion-ready .hero-intro { animation-delay: 450ms; }
@@ -523,10 +549,14 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   50% { box-shadow: 0 0 0 5px rgba(112, 226, 182, 0); }
 }
 @media (max-width: 760px) {
+  .hero h1 { font-size: clamp(42px, 10.5vw, 62px); }
   .hero-atmosphere::before { opacity: .27; background-size: 56px 56px; }
   .hero-glow { width: min(100vw, 420px); }
   .hero-glow-blue { top: -10%; left: -42%; }
   .hero-glow-green { right: -38%; bottom: -17%; }
+}
+@media (max-width: 430px) {
+  .hero h1 { font-size: clamp(40px, 11vw, 48px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-atmosphere::before, .hero-glow, .hero .status-dot,
