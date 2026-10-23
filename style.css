@@ -662,8 +662,21 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; filter: blur(5px); tran
   --blue: #74bdff;
   --line: rgba(111,180,230,.18);
   --line-strong: rgba(111,180,230,.34);
+  position: relative;
+  isolation: isolate;
   color: var(--text);
-  border-color: var(--line);
+  border: 0;
+  background: transparent;
+}
+.about-section::before, .experience-section::before, .skills-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 auto 0 50%;
+  width: 100vw;
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%);
+  border-bottom: 1px solid var(--line);
   background: #0b1725;
 }
 .about-section .section-kicker,
