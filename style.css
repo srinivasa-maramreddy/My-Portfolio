@@ -729,3 +729,47 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; filter: blur(5px); tran
 .skills-section .skill-list li > span:first-child { color: #e2eef6; }
 .skills-section .skill-level { color: #a9c0d0; }
 .skills-section .skill-level-basic::before { background: #74bdff; }
+
+.contact-links .social-link {
+  min-height: 48px;
+  gap: 11px;
+  border-color: rgba(210,225,237,.28);
+  border-radius: 9px;
+  color: #f5f7fa;
+  background: rgba(255,255,255,.045);
+}
+.contact-links .social-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.contact-links .social-icon svg { width: 15px; height: 15px; fill: currentColor; }
+.contact-links .social-link-linkedin .social-icon { color: #fff; background: #0a66c2; }
+.contact-links .social-link-github .social-icon { color: #181717; background: #f0f6fc; }
+.contact-links .social-label { margin: 0; color: #f5f7fa; font-size: 12px; }
+.contact-links .social-arrow { margin: 0 0 0 auto; color: #b9c9d5; font-size: 14px; }
+.contact-links .social-link-linkedin:hover,
+.contact-links .social-link-linkedin:focus-visible,
+.contact-links .social-link-linkedin:active {
+  border-color: #0a66c2;
+  color: #fff;
+  background: rgba(10,102,194,.2);
+  box-shadow: 0 0 0 3px rgba(10,102,194,.16);
+  outline-color: #0a66c2;
+}
+.contact-links .social-link-github:hover,
+.contact-links .social-link-github:focus-visible,
+.contact-links .social-link-github:active {
+  border-color: #f0f6fc;
+  color: #fff;
+  background: rgba(240,246,252,.12);
+  box-shadow: 0 0 0 3px rgba(240,246,252,.1);
+  outline-color: #f0f6fc;
+}
+.contact-links .social-link:hover .social-icon,
+.contact-links .social-link:focus-visible .social-icon,
+.contact-links .social-link:active .social-icon { transform: scale(1.08); }
