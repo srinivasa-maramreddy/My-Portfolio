@@ -444,6 +444,13 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   color: #d4dfeb;
   background: rgba(255, 255, 255, .035);
 }
+.hero .visual-glow { background: transparent; filter: none; animation: none; }
+.hero .visual-grid-mark { opacity: .3; animation: none; }
+.hero .portrait-card {
+  border-color: rgba(130, 173, 255, .3);
+  box-shadow: 0 0 0 7px #081525, 0 0 0 8px rgba(130, 173, 255, .2), 0 32px 74px rgba(0, 0, 0, .34);
+}
+.hero .visual-index { color: #a9b8ca; }
 .hero .hero-actions .button { transition: transform .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease, box-shadow .22s ease; }
 .hero .hero-actions .button-primary {
   border-color: rgba(112, 226, 182, .72);
