@@ -23,6 +23,7 @@ if (portfolioIntro) {
     portfolioIntro.classList.add("is-leaving");
     document.documentElement.classList.remove("portfolio-intro-pending");
     document.body.classList.remove("portfolio-intro-open");
+    document.body.classList.add("portfolio-entered");
     backgroundContent.forEach((element) => element.removeAttribute("inert"));
     startPortfolioAnimations();
     document.querySelector("#hero-title")?.focus({ preventScroll: true });
@@ -93,7 +94,7 @@ function startPortfolioAnimations() {
 
     revealTargets.forEach((element, index) => {
       element.classList.add("reveal");
-      element.style.setProperty("--reveal-delay", `${(index % 3) * 75}ms`);
+      element.style.setProperty("--reveal-delay", `${(index % 4) * 105}ms`);
       revealObserver.observe(element);
     });
     document.body.classList.add("motion-ready");

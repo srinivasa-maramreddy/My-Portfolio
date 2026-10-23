@@ -389,10 +389,10 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 @keyframes ticker-scroll { to { transform: translateX(-50%); } }
 @keyframes glow-drift { to { transform: translate3d(-10px, 14px, 0) scale(1.07); opacity: .8; } }
 @keyframes mark-drift { to { transform: translate3d(-8px, 10px, 0) rotate(7deg); } }
-.reveal { opacity: 1; transform: none; transition: opacity .65s ease, transform .65s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
-body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(18px); }
+.reveal { opacity: 1; filter: blur(0); transform: none; transition: opacity .78s ease, filter .78s ease, transform .78s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
+body.motion-ready .reveal:not(.is-visible) { opacity: 0; filter: blur(5px); transform: translate3d(0, 30px, 0) scale(.985); }
 @media (prefers-reduced-motion: reduce) {
-  body.motion-ready .reveal, body.motion-ready .reveal:not(.is-visible) { opacity: 1; transform: none; transition: none; }
+  body.motion-ready .reveal, body.motion-ready .reveal:not(.is-visible) { opacity: 1; filter: none; transform: none; transition: none; }
   .ticker-track { animation: none; }
 }
 
@@ -543,37 +543,63 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   box-shadow: 0 10px 26px rgba(192, 174, 126, .12);
 }
 .hero a:focus-visible { outline-color: #e0cc91; }
-.hero-motion-ready .hero-copy > * {
-  animation: hero-content-reveal .78s cubic-bezier(.2, .7, .2, 1) both;
+.portfolio-entered .site-header .brand,
+.portfolio-entered .site-header .desktop-nav a,
+.portfolio-entered .site-header .nav-contact,
+.portfolio-entered .site-header .menu-toggle {
+  animation: entry-header-reveal .72s cubic-bezier(.2,.7,.2,1) both;
 }
-.hero-motion-ready .hero-name { animation-delay: 0ms; }
-.hero-motion-ready .hero-copy > .eyebrow { animation-delay: 120ms; }
+.portfolio-entered .site-header .desktop-nav a:nth-child(1) { animation-delay: 100ms; }
+.portfolio-entered .site-header .desktop-nav a:nth-child(2) { animation-delay: 190ms; }
+.portfolio-entered .site-header .desktop-nav a:nth-child(3) { animation-delay: 280ms; }
+.portfolio-entered .site-header .desktop-nav a:nth-child(4) { animation-delay: 370ms; }
+.portfolio-entered .site-header .nav-contact,
+.portfolio-entered .site-header .menu-toggle { animation-delay: 460ms; }
+.hero-motion-ready .hero-copy > * {
+  animation: hero-content-reveal .86s cubic-bezier(.2, .7, .2, 1) both;
+}
+.hero-motion-ready .hero-name { animation-delay: 220ms; }
+.hero-motion-ready .hero-copy > .eyebrow { animation-delay: 370ms; }
 .hero-motion-ready .hero-copy > h1 {
   animation-name: hero-title-reveal;
-  animation-delay: 240ms;
+  animation-delay: 540ms;
 }
 .hero-motion-ready .hero-copy > h1 > span {
   display: block;
-  animation: hero-title-accent-reveal .78s cubic-bezier(.2, .7, .2, 1) 360ms both;
+  animation: hero-title-accent-reveal .86s cubic-bezier(.2, .7, .2, 1) 730ms both;
 }
-.hero-motion-ready .hero-intro { animation-delay: 450ms; }
-.hero-motion-ready .hero-actions { animation-delay: 640ms; }
-.hero-motion-ready .hero-status { animation-delay: 760ms; }
-.hero-motion-ready .hero-stack { animation-delay: 900ms; }
+.hero-motion-ready .hero-intro { animation-delay: 940ms; }
+.hero-motion-ready .hero-actions { animation-delay: 1160ms; }
+.hero-motion-ready .hero-status { animation-delay: 1380ms; }
+.hero-motion-ready .hero-stack { animation-delay: 1600ms; }
 .hero-motion-ready .hero-visual {
-  animation: hero-content-reveal .82s cubic-bezier(.2, .7, .2, 1) 300ms both;
+  animation: hero-visual-reveal .96s cubic-bezier(.2, .7, .2, 1) 650ms both;
+}
+@keyframes entry-header-reveal {
+  from { opacity: 0; filter: blur(5px); transform: translate3d(0, -14px, 0); }
+  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
 }
 @keyframes hero-content-reveal {
-  from { opacity: 0; transform: translate3d(0, 12px, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from { opacity: 0; filter: blur(5px); transform: translate3d(0, 30px, 0); }
+  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
 }
 @keyframes hero-title-reveal {
-  from { opacity: .9; transform: translate3d(0, 14px, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from { opacity: 0; filter: blur(7px); transform: translate3d(0, 34px, 0); }
+  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
 }
 @keyframes hero-title-accent-reveal {
-  from { opacity: .78; transform: translate3d(0, 14px, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
+  from { opacity: 0; filter: blur(7px); transform: translate3d(0, 34px, 0); }
+  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
+}
+@keyframes hero-visual-reveal {
+  from { opacity: 0; filter: blur(6px); transform: translate3d(28px, 18px, 0) scale(.96); }
+  to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes intro-portrait-exit {
+  to { opacity: 0; filter: blur(8px); transform: scale(1.14); }
+}
+@keyframes intro-instruction-exit {
+  to { opacity: 0; transform: translateY(12px); }
 }
 @keyframes hero-grid-drift {
   to { transform: translate3d(0, -16px, 0); }
@@ -588,6 +614,8 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
   0%, 100% { box-shadow: 0 0 0 0 rgba(192, 174, 126, .3); }
   50% { box-shadow: 0 0 0 5px rgba(192, 174, 126, 0); }
 }
+.portfolio-intro.is-leaving .intro-portrait { animation: intro-portrait-exit .48s cubic-bezier(.4,0,.2,1) both; }
+.portfolio-intro.is-leaving .intro-instruction { animation: intro-instruction-exit .3s ease both; }
 @media (max-width: 760px) {
   .hero { min-height: auto; align-items: center; padding-block: 60px 70px; }
   .hero h1 { font-size: clamp(42px, 10.5vw, 62px); }
@@ -601,12 +629,16 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(1
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-atmosphere::before, .hero-glow, .hero .status-dot,
+  .portfolio-entered .site-header .brand, .portfolio-entered .site-header .desktop-nav a,
+  .portfolio-entered .site-header .nav-contact, .portfolio-entered .site-header .menu-toggle,
   .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual,
-  .hero .hero-actions .button {
+  .hero .hero-actions .button, .portfolio-intro.is-leaving .intro-portrait,
+  .portfolio-intro.is-leaving .intro-instruction {
     animation: none !important;
     transition: none !important;
     transform: none !important;
     translate: none !important;
+    filter: none !important;
   }
-  .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual { opacity: 1 !important; }
+  .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual { opacity: 1 !important; filter: none !important; }
 }
