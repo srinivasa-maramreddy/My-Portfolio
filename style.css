@@ -58,7 +58,7 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 .portfolio-intro-open { overflow: hidden; }
 .intro-enter { position: relative; z-index: 1; width: 100%; height: 100%; display: grid; align-content: center; justify-items: center; gap: 0; padding: 28px; border: 0; color: inherit; background: transparent; font: inherit; text-align: center; cursor: pointer; }
 .intro-portrait { position: relative; display: block; width: clamp(220px, 31vw, 350px); aspect-ratio: 1; overflow: hidden; margin-bottom: 34px; border: 1px solid rgba(105,184,255,.62); border-radius: 50%; background: #0b1b2c; box-shadow: 0 0 0 9px #071321, 0 0 0 10px rgba(72,168,232,.28), 0 30px 90px rgba(0,0,0,.52); animation: intro-portrait-enter .8s cubic-bezier(.2,.7,.2,1) 80ms both; transition: width .55s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease; }
-.intro-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 39% center; animation: intro-profile-blink 1.4s ease-in-out 250ms 1 both; }
+.intro-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 39% center; }
 .intro-instruction { display: flex; align-items: center; gap: 10px; margin-top: 40px; color: #b6c8d8; font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; animation: intro-copy-enter .65s cubic-bezier(.2,.7,.2,1) 500ms both; }
 .portfolio-intro.is-introducing { align-content: center; overflow-y: auto; }
 .portfolio-intro.is-introducing .intro-enter { height: auto; align-content: start; padding: clamp(18px, 5vh, 42px) 20px 0; cursor: default; }
@@ -78,7 +78,6 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 .intro-enter:focus-visible .intro-instruction { text-decoration: underline; text-decoration-color: #52dba9; text-underline-offset: 6px; }
 @keyframes intro-portrait-enter { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes intro-copy-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes intro-profile-blink { 0%, 47%, 53%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.04); } }
 @media (max-width: 600px) {
   .intro-enter { padding-inline: 20px; }
   .intro-portrait { width: clamp(210px, 67vw, 300px); margin-bottom: 28px; }
