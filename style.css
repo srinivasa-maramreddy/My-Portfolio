@@ -430,6 +430,13 @@ body.motion-ready .about-section.about-sequence-ready.about-quote-visible #about
   filter: none;
   transform: none;
 }
+body.motion-ready .about-section.about-sequence-ready.about-quote-visible.about-quote-centered #about-title {
+  transform: translate3d(var(--about-center-x, 0px), var(--about-center-y, 0px), 0);
+  text-align: center;
+}
+body.motion-ready .about-section.about-sequence-ready.about-quote-moving #about-title {
+  text-align: center;
+}
 body.motion-ready .about-section.about-sequence-ready #about-title > span {
   display: inline-block;
   clip-path: inset(0 100% 0 0);

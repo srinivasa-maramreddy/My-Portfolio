@@ -121,9 +121,22 @@ function startPortfolioAnimations() {
       const aboutObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          aboutSection.classList.add("about-quote-visible");
+          const aboutTitle = aboutSection.querySelector("#about-title");
+          if (aboutTitle) {
+            const titleBounds = aboutTitle.getBoundingClientRect();
+            aboutSection.style.setProperty("--about-center-x", `${window.innerWidth / 2 - (titleBounds.left + titleBounds.width / 2)}px`);
+            aboutSection.style.setProperty("--about-center-y", `${window.innerHeight / 2 - (titleBounds.top + titleBounds.height / 2)}px`);
+          }
+          aboutSection.classList.add("about-quote-visible", "about-quote-centered");
           observer.unobserve(entry.target);
-          window.setTimeout(() => aboutSection.classList.add("about-details-visible"), 1150);
+          window.setTimeout(() => {
+            aboutSection.classList.remove("about-quote-centered");
+            aboutSection.classList.add("about-quote-moving");
+            window.setTimeout(() => {
+              aboutSection.classList.remove("about-quote-moving");
+              aboutSection.classList.add("about-details-visible");
+            }, 900);
+          }, 3100);
         });
       }, { threshold: 0.12, rootMargin: "0px 0px -32px 0px" });
       aboutObserver.observe(aboutSection);
