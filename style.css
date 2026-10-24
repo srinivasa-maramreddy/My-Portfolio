@@ -156,6 +156,7 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 .section-kicker span:first-child { color: var(--accent); }
 .about-layout { display: grid; grid-template-columns: 1fr .83fr; gap: clamp(40px, 9vw, 128px); align-items: start; margin-top: 36px; }
 .section-title { margin: 0; color: var(--text); font-size: clamp(38px, 5vw, 62px); font-weight: 650; line-height: 1.1; letter-spacing: -.065em; }
+.about-section #about-title { font-size: clamp(34px, 3.6vw, 52px); line-height: 1.08; }
 .about-copy { padding-top: 7px; }
 .about-copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
 .about-copy .body-large { margin-bottom: 17px; color: #e1e8ef; font-size: 17px; line-height: 1.7; }
@@ -293,6 +294,7 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
   .section { padding-block: 76px; }
   .about-layout { grid-template-columns: 1fr; gap: 23px; margin-top: 26px; }
   .section-title { font-size: clamp(37px, 9vw, 54px); }
+  .about-section #about-title { font-size: clamp(26px, 7.2vw, 34px); }
   .about-copy { max-width: 600px; }
   .about-copy .body-large { font-size: 15px; }
   .about-facts { grid-template-columns: 1fr; gap: 9px; margin-top: 34px; }
