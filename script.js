@@ -15,6 +15,7 @@ if (portfolioIntro) {
   ].filter(Boolean);
   let isEntering = false;
   let introTimer;
+  let autoEnterTimer;
 
   document.body.classList.add("portfolio-intro-open");
   backgroundContent.forEach((element) => element.setAttribute("inert", ""));
@@ -35,6 +36,7 @@ if (portfolioIntro) {
 
   const enterPortfolio = () => {
     if (isEntering) return;
+    window.clearTimeout(autoEnterTimer);
     isEntering = true;
     introMessage?.removeAttribute("aria-hidden");
     portfolioIntro.classList.add("is-introducing");
@@ -45,6 +47,7 @@ if (portfolioIntro) {
   };
 
   enterButton?.addEventListener("click", enterPortfolio);
+  autoEnterTimer = window.setTimeout(enterPortfolio, 1500);
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") return;
     if (isEntering) finishIntro();
