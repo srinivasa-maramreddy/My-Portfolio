@@ -122,10 +122,12 @@ function startPortfolioAnimations() {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const aboutTitle = aboutSection.querySelector("#about-title");
-          if (aboutTitle) {
+          const aboutLayout = aboutSection.querySelector(".about-layout");
+          if (aboutTitle && aboutLayout) {
             const titleBounds = aboutTitle.getBoundingClientRect();
-            aboutSection.style.setProperty("--about-center-x", `${window.innerWidth / 2 - (titleBounds.left + titleBounds.width / 2)}px`);
-            aboutSection.style.setProperty("--about-center-y", `${window.innerHeight / 2 - (titleBounds.top + titleBounds.height / 2)}px`);
+            const layoutBounds = aboutLayout.getBoundingClientRect();
+            aboutSection.style.setProperty("--about-center-x", `${layoutBounds.left + layoutBounds.width / 2 - (titleBounds.left + titleBounds.width / 2)}px`);
+            aboutSection.style.setProperty("--about-center-y", `${layoutBounds.top + layoutBounds.height / 2 - (titleBounds.top + titleBounds.height / 2)}px`);
           }
           aboutSection.classList.add("about-quote-visible", "about-quote-centered");
           observer.unobserve(entry.target);
