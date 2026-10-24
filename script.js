@@ -59,7 +59,7 @@ if (portfolioIntro) {
 const heroSection = document.querySelector(".hero");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const revealTargets = document.querySelectorAll(
-  ".section-kicker, .about-copy, .fact, .section-heading-row, .timeline-item, .credential-card, .skill-panel, .project-card, .contact-layout > div"
+  ".section-kicker, .section-heading-row, .timeline-item, .credential-card, .skill-panel, .project-card, .contact-layout > div"
 );
 
 function startPortfolioAnimations() {
@@ -114,6 +114,21 @@ function startPortfolioAnimations() {
       element.style.setProperty("--reveal-delay", `${(index % 4) * 105}ms`);
       revealObserver.observe(element);
     });
+
+    const aboutSection = document.querySelector(".about-section");
+    if (aboutSection) {
+      aboutSection.classList.add("about-sequence-ready");
+      const aboutObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          aboutSection.classList.add("about-quote-visible");
+          observer.unobserve(entry.target);
+          window.setTimeout(() => aboutSection.classList.add("about-details-visible"), 1150);
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -32px 0px" });
+      aboutObserver.observe(aboutSection);
+    }
+
     document.body.classList.add("motion-ready");
   }
 }
