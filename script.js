@@ -40,8 +40,8 @@ if (portfolioIntro) {
     portfolioIntro.classList.add("is-introducing");
     enterButton?.setAttribute("aria-label", "Introduction displayed. Press Escape to continue now.");
 
-    // Give the full introduction time to reveal and be read before the hero quote builds.
-    introTimer = window.setTimeout(finishIntro, motionPreference.matches ? 4200 : 6200);
+    // Pause briefly after the introduction before the hero quote builds.
+    introTimer = window.setTimeout(finishIntro, 3600);
   };
 
   enterButton?.addEventListener("click", enterPortfolio);
