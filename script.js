@@ -2,9 +2,11 @@ const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector("#mobile-nav");
 
 const portfolioIntro = document.querySelector("#portfolio-intro");
+const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
 let portfolioAnimationsStarted = false;
 if (portfolioIntro) {
   const enterButton = portfolioIntro.querySelector(".intro-enter");
+  const introMessage = portfolioIntro.querySelector("#intro-message");
   const backgroundContent = [
     document.querySelector(".skip-link"),
     document.querySelector(".site-header"),
@@ -12,14 +14,14 @@ if (portfolioIntro) {
     document.querySelector(".site-footer")
   ].filter(Boolean);
   let isEntering = false;
+  let introTimer;
 
   document.body.classList.add("portfolio-intro-open");
   backgroundContent.forEach((element) => element.setAttribute("inert", ""));
 
-  const enterPortfolio = () => {
-    if (isEntering) return;
-    isEntering = true;
-
+  const finishIntro = () => {
+    if (portfolioIntro.classList.contains("is-leaving")) return;
+    window.clearTimeout(introTimer);
     portfolioIntro.classList.add("is-leaving");
     document.documentElement.classList.remove("portfolio-intro-pending");
     document.body.classList.remove("portfolio-intro-open");
@@ -31,15 +33,27 @@ if (portfolioIntro) {
     window.setTimeout(() => portfolioIntro.remove(), 700);
   };
 
+  const enterPortfolio = () => {
+    if (isEntering) return;
+    isEntering = true;
+    introMessage?.removeAttribute("aria-hidden");
+    portfolioIntro.classList.add("is-introducing");
+    enterButton?.setAttribute("aria-label", "Introduction displayed. Press Escape to continue now.");
+
+    // Give the full introduction time to reveal and be read before the hero quote builds.
+    introTimer = window.setTimeout(finishIntro, motionPreference.matches ? 4200 : 6200);
+  };
+
   enterButton?.addEventListener("click", enterPortfolio);
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !isEntering) enterPortfolio();
+    if (event.key !== "Escape") return;
+    if (isEntering) finishIntro();
+    else enterPortfolio();
   });
   window.requestAnimationFrame(() => enterButton?.focus({ preventScroll: true }));
 }
 
 const heroSection = document.querySelector(".hero");
-const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 const revealTargets = document.querySelectorAll(
   ".section-kicker, .about-copy, .fact, .section-heading-row, .timeline-item, .credential-card, .skill-panel, .project-card, .contact-layout > div"
