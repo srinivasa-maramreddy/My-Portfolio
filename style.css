@@ -258,6 +258,9 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
   html { scroll-padding-top: 72px; }
   .wrap { width: min(var(--wrap), calc(100% - 40px)); }
   .nav-shell { width: calc(100% - 40px); height: 70px; }
+  .brand { gap: 10px; }
+  .brand-mark { width: 46px; height: 46px; flex: 0 0 46px; font-size: 14px; background: rgba(105,184,255,.08); box-shadow: 0 0 0 3px rgba(82,219,169,.08); }
+  .brand-copy { font-size: 12px; }
   .desktop-nav, .nav-contact { display: none; }
   .menu-toggle { width: 42px; height: 42px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line-strong); border-radius: 8px; color: var(--text); background: transparent; cursor: pointer; }
   .menu-toggle span { width: 16px; height: 1px; display: block; background: var(--text); transition: transform .2s ease; }
@@ -654,8 +657,8 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; filter: blur(5px); tran
   .hero-motion-ready .hero-copy > *, .hero-motion-ready .hero-copy > h1 > span, .hero-motion-ready .hero-visual { opacity: 1 !important; filter: none !important; }
 }
 
-/* Carry the opening navy, blue, and emerald theme through pages 2–4.
-   The projects and contact sections retain their existing palettes. */
+/* Carry the opening navy, blue, and emerald theme through sections 2–5.
+   The projects section retains its existing palette. */
 .ticker {
   border-color: rgba(105,184,255,.2);
   background: #0a1725;
@@ -679,6 +682,32 @@ body.motion-ready .reveal:not(.is-visible) { opacity: 0; filter: blur(5px); tran
   border: 0;
   background: transparent;
 }
+.contact-section {
+  --panel: #102135;
+  --text: #edf6ff;
+  --muted: #b4c7d6;
+  --dim: #8ea9bd;
+  --accent: #52dba9;
+  --blue: #74bdff;
+  --line: rgba(111,180,230,.18);
+  --line-strong: rgba(111,180,230,.34);
+  color: var(--text);
+  border-color: rgba(105,184,255,.2);
+  background: radial-gradient(ellipse at 88% 38%, rgba(105,184,255,.16), transparent 39%), radial-gradient(ellipse at 12% 92%, rgba(82,219,169,.08), transparent 36%), #0b1725;
+}
+.contact-section::after {
+  border-color: rgba(105,184,255,.15);
+  box-shadow: 0 0 0 34px rgba(105,184,255,.025), 0 0 0 72px rgba(82,219,169,.025);
+}
+.contact-section .section-title { color: #edf6ff; }
+.contact-section .section-title span { color: #52dba9; }
+.contact-section .section-kicker,
+.contact-section .eyebrow { color: #a7bfd0; }
+.contact-section .contact-copy > p { color: #b4c7d6; }
+.contact-section .contact-email { border-bottom-color: rgba(82,219,169,.45); }
+.contact-section .contact-email:hover,
+.contact-section .contact-email:focus-visible,
+.contact-section .contact-email:active { border-bottom-color: #ea4335; }
 .about-section::before, .experience-section::before, .skills-section::before {
   position: absolute;
   z-index: -1;
