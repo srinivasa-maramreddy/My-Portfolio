@@ -188,7 +188,7 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
 .timeline-tech { margin-top: 13px; }
 .timeline-tech .stack-label { margin-bottom: 7px; }
 .timeline-tech .stack-list { gap: 6px; }
-.credentials { display: grid; grid-template-rows: 1fr 1fr; gap: 13px; }
+.credentials { display: grid; grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 13px; }
 .credential-card { position: relative; min-height: 148px; display: flex; align-items: flex-start; gap: 16px; padding: 22px; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: radial-gradient(circle at 100% 0%, rgba(130,244,203,.075), transparent 40%), var(--panel); }
 .credential-symbol { display: grid; width: 39px; height: 39px; flex: 0 0 39px; place-items: center; border: 1px solid rgba(130,244,203,.25); border-radius: 8px; color: var(--accent); font-family: var(--mono); font-size: 10px; }
 .credential-card h3 { margin: 10px 0 2px; color: var(--text); font-size: 17px; letter-spacing: -.035em; }
@@ -306,7 +306,7 @@ html.portfolio-intro-pending .portfolio-intro { opacity: 1; visibility: visible;
   .timeline-item { grid-template-columns: 100px 1px minmax(0,1fr); gap: 14px; }
   .timeline-date { font-size: 9px; }
   .timeline-card { padding: 18px; }
-  .credentials { grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 10px; }
+  .credentials { grid-template-columns: 1fr; grid-template-rows: auto; gap: 10px; }
   .credential-card { min-height: 152px; flex-direction: column; gap: 12px; padding: 17px; }
   .credential-card h3 { font-size: 15px; }
   .credential-card p { font-size: 10px; }
