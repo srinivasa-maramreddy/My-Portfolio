@@ -18,11 +18,13 @@ if (portfolioIntro) {
   let autoEnterTimer;
 
   document.body.classList.add("portfolio-intro-open");
+  window.addEventListener("pageshow", () => window.scrollTo(0, 0), { once: true });
   backgroundContent.forEach((element) => element.setAttribute("inert", ""));
 
   const finishIntro = () => {
     if (portfolioIntro.classList.contains("is-leaving")) return;
     window.clearTimeout(introTimer);
+    window.scrollTo(0, 0);
     portfolioIntro.classList.add("is-leaving");
     document.documentElement.classList.remove("portfolio-intro-pending");
     document.body.classList.remove("portfolio-intro-open");

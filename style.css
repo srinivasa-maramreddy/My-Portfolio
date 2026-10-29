@@ -19,6 +19,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+html.portfolio-intro-pending { scroll-behavior: auto; }
 body {
   margin: 0;
   min-width: 320px;
